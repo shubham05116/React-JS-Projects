@@ -4,7 +4,7 @@ const reviews = [
     name: "Pranay Gupta",
     job: "Software Engineer",
     image: "https://aeccc.targettechnology.in/static/media/PranayGupta.f3c530b7630ba8efb2ab.jpg",
-    text: "I have had the pleasure of working with this team on several projects, and I am consistently impressed with their technical expertise and ability to deliver quality solutions on time and within budget. They are a true partner and an asset to any project.",
+    text: "  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, dolore pariatur! Voluptatem cumque perferendis alias obcaecati, unde velit tenetur perspiciatis omnis, iste, fuga placeat eaque quaerat eum aut adipisci! Quo!Lorem.",
   },
   {
     id: 2,
