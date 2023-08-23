@@ -1,10 +1,10 @@
 
 # React-JS-Projects
-# Links:
+ Links:
 
-# 1)Top Courses : https://top-courses-p.netlify.app/
+ 1)Top Courses : https://top-courses-p.netlify.app/
 
-# 2)Testimonial: https://testimonials-pj.netlify.app/
+2)Testimonial: https://testimonials-pj.netlify.app/
 
 These project was bootstrapped with Create React App.
 
