@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-const Filter = ({ filterData , setCategory , category }) => {
+const Filter = ({ filterData , setCategory  }) => {
 
     function filterHandler(title){
         setCategory(title);
