@@ -162,7 +162,7 @@ export default function Form() {
             className='font-medium text-sm'>State / Province</label>
 
             <input 
-            type="text" 
+            type="text"
             id='state'
             name='state'
             placeholder='Punjab'
