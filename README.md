@@ -2,13 +2,6 @@
 # React-JS-Projects
 These project was bootstrapped with Create React App.
 
-# Links:
-
- 1)Top Courses : https://top-courses-p.netlify.app/
- 
-2)Testimonial: https://testimonials-pj.netlify.app/
-
-
 # Available Scripts
 In the project directory, you can run:
 
