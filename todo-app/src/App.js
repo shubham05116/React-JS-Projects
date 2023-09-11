@@ -32,7 +32,6 @@ const App = () => {
     //Edit logic:
     function editChangeHandler(e) {
         setEditChange(e.target.value);
-
     }
 
     function editHandler(id) {
@@ -57,13 +56,11 @@ const App = () => {
         setEditItemId(null);
         setEditChange('');
     }
-
-
- function completeHandler(id){
-
-
- }
-
+    
+    
+function completeHandler(id){
+    
+}
 
 
 
@@ -109,11 +106,8 @@ const App = () => {
                         ) : (
 
                             <div className='' >
-                            <input 
-
-                            type="checkbox" name="check" 
-
-                            onChange={checkHandler}/>
+                            <button onClick={()=>completeHandler(list.id)}></button>
+                           
                                {list.text}
 
                                     <button className='bg-[#991b1b] text-white text-lg font-bold px-4 py-2 mx-5' onClick={() => DeleteHandler(list.id)}>
