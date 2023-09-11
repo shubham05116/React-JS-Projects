@@ -7,7 +7,6 @@ const App = () => {
     const [input, setInput] = useState('');
     const [editChange, setEditChange] = useState('');
     const [editItemId, setEditItemId] = useState(null);
-    const[check, setCheck] = useState(false);
 
     //Add task logic:
     function changeHandler(e) {
@@ -40,6 +39,7 @@ const App = () => {
         setEditItemId(id);
         const data = lists.find((list) => list.id === id);
         setEditChange(data.text);
+        
     }
 
 
@@ -59,9 +59,11 @@ const App = () => {
     }
 
 
-    function checkHandler(){
-        setCheck(!check)
-    }
+ function completeHandler(id){
+
+
+ }
+
 
 
 
@@ -108,16 +110,17 @@ const App = () => {
 
                             <div className='' >
                             <input 
-                            
+
                             type="checkbox" name="check" 
-                            
+
                             onChange={checkHandler}/>
                                {list.text}
-                             
+
                                     <button className='bg-[#991b1b] text-white text-lg font-bold px-4 py-2 mx-5' onClick={() => DeleteHandler(list.id)}>
                                         Delete
                                     </button>
                                     <button className='bg-[#075985] text-white text-lg font-bold px-4 py-2 m-5' onClick={() => editHandler(list.id)}>Edit</button>
+                                    <button className='bg-[#075985] text-white text-lg font-bold px-4 py-2 m-5' onClick={()=>completeHandler(list.id)}>Complete</button>
 
                             </div>
                         )}
