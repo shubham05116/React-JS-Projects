@@ -19,6 +19,8 @@ const App = () => {
         if (input.length !== 20) setInput(e.target.value);
     }
 
+
+    //submit task
     function submitHandler(e) {
         e.preventDefault();
         setList((prev) => [
