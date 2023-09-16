@@ -19,7 +19,7 @@ const App = () => {
         if (input.length !== 20) setInput(e.target.value);
     }
 
-    //submit task
+    //submit task:
     function submitHandler(e) {
         e.preventDefault();
         setList((prev) => [
@@ -51,7 +51,7 @@ const App = () => {
         setEditChange(data.text);
     }
 
-    // Save edit
+    // Save edit:
     function saveHandler(id) {
         const updatedList = lists.map((list) =>
             list.id === id ? { ...list, text: editChange} : list
