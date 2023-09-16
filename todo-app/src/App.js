@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { MdSave } from 'react-icons/md';
 import { ImCancelCircle } from 'react-icons/im';
@@ -61,14 +61,14 @@ const App = () => {
         setEditingItemId(null); // Reset editing item ID
     }
 
-    // Cancel logic
+    // Cancel logic:
     function cancelEdit() {
         setEditItemId(null);
         setEditChange('');
         setEditingItemId(null); // Reset editing item ID
     }
 
-    // Complete logic
+    // Complete logic:
     function completeHandler(id) {
         const updated = lists.map((list) =>
             list.id === id ? { ...list, complete: !list.complete } : list
