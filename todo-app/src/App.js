@@ -78,9 +78,7 @@ const App = () => {
 
     return (
         <div className='flex items-center flex-col gap-10 w-[11/12] h-screen '>
-            <header className='text-xl font-bold text-white bg-slate-900 p-2 rounded m-10'>
-                <h1 className='text-[40px] p-3 '>To-Do List</h1>
-            </header>
+           
 
             <form onSubmit={submitHandler}>
                 <input
