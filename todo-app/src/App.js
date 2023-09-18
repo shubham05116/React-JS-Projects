@@ -5,6 +5,7 @@ import { ImCancelCircle } from 'react-icons/im';
 import { AiOutlineCheckSquare, AiOutlineDelete } from 'react-icons/ai';
 import { FiEdit } from 'react-icons/fi';
 import { GrAdd } from 'react-icons/gr';
+import Header from './components/Header';
 
 let next = 1;
 const App = () => {
@@ -77,8 +78,8 @@ const App = () => {
     }
 
     return (
-        <div className='flex items-center flex-col gap-10 w-[11/12] h-screen '>
-           
+        <div className='flex items-center flex-col gap-5 w-[11/12] h-screen '>
+           <Header/>
 
             <form onSubmit={submitHandler}>
                 <input
