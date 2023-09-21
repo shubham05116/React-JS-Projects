@@ -16,8 +16,8 @@ const AddTask = () => {
  function submitHandler(e) {
   e.preventDefault();
   setList((prev) => [
+    { text: input, id: next++, complete: false },
       ...prev,
-      { text: input, id: next++, complete: false },
   ]);
   setInput('');
 }

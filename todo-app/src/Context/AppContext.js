@@ -16,6 +16,7 @@ export const AppContextProvider=({children})=>{
         const newData = lists.filter((list) => list.id !== id);
         setList(newData);
     }
+    
 
     //edit:
     function editHandler(id) {

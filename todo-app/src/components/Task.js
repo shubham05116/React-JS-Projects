@@ -13,7 +13,7 @@ const Task = ({ list }) => {
   }
 
   return (
-    <div className='w-[600px] m-3 p-5'>
+    <div className='w-[60vw] m-3 p-3'>
       <li key={list.id} className={list.complete ? 'completed ' : 'list-none'}>
         {editItemId === list.id ? (
           <div className='flex justify-center items-center'>
@@ -40,25 +40,25 @@ const Task = ({ list }) => {
             </div>
           </div>
         ) : (
-          <div className='flex flex-wrap justify-center min-w-[400px] m-5'>
-            <div className='flex flex-wrap  text-center rounded pl-2 text-2xl '>
+          <div className='flex text-white bg-slate-400 p-2 rounded flex-wrap justify-center min-w-[100px] '>
+            <div className=' flex flex-wrap  text-center rounded pl-2 text-2xl '>
               {list.text}
             </div>
             <div>
               <button
-                className='bg-[#ea2a2a] text-white text-lg font-bold rounded px-4 py-2 ml-5 '
+                className='bg-[#989696] text-white text-lg font-bold rounded px-4 py-2 ml-5 '
                 onClick={() => deleteHandler(list.id)}
               >
                 <AiOutlineDelete />
               </button>
               <button
-                className={`bg-[#075985] text-white text-lg rounded font-bold px-4 py-2 ml-5 ${editingItemId === list.id ? 'pointer-events-none' : ''}`}
+                className={`bg-[#7a878e] text-white text-lg rounded font-bold px-4 py-2 ml-5 ${editingItemId === list.id ? 'pointer-events-none' : ''}`}
                 onClick={() => editHandler(list.id)}
               >
                 <FiEdit />
               </button>
               <button
-                className='bg-[#e31baa] text-white rounded text-lg font-bold px-4 py-2 ml-5'
+                className='bg-[#3e3b3d] text-white rounded text-lg font-bold px-4 py-2 ml-5'
                 onClick={() => completeHandler(list.id)}
               >
                 <AiOutlineCheckSquare />
