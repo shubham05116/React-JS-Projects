@@ -6,7 +6,7 @@ import { FiEdit } from 'react-icons/fi';
 import { AppContext } from '../Context/AppContext';
 
 const Task = ({ list }) => {
-  
+
   const { deleteHandler,
     editItemId,
     editingItemId,
@@ -26,10 +26,10 @@ const Task = ({ list }) => {
 
 
   return (
-    <div className='w-[60vw] m-3 p-3'>
+    <div className='w-[60vw]  m-3 p-3'>
       <li key={list.id} className={list.complete ? 'completed ' : 'list-none'}>
         {editItemId === list.id ? (
-          <div className='flex justify-center items-center'>
+          <div className='flex  justify-center items-center'>
             <input
               className='border-2 text-xl w-[40vw] h-[10vh] m-2 '
               type='text'
@@ -53,25 +53,25 @@ const Task = ({ list }) => {
             </div>
           </div>
         ) : (
-          <div className='flex text-white bg-slate-400 p-2 rounded flex-wrap justify-center min-w-[100px] '>
-            <div className=' flex flex-wrap  text-center rounded pl-2 text-2xl break-all '>
-              <input type="checkbox" /> {list.text}
+          <div className='flex text-black bg-white px-5 py-2  rounded flex-wrap justify-center items-center min-w-[100px] '>
+            <div className=' flex flex-wrap  text-center rounded pl-2 text-2xl break-all my-2 items-center capitalize'>
+              {list.text}
             </div>
             <div>
               <button
-                className='bg-[#989696] text-white text-lg font-bold rounded px-4 py-2 ml-5 '
+                className='bg-[#421d1d] text-white text-lg font-bold rounded px-4 py-2 my-5 ml-5'
                 onClick={() => deleteHandler(list.id)}
               >
                 <AiOutlineDelete />
               </button>
               <button
-                className={`bg-[#7a878e] text-white text-lg rounded font-bold px-4 py-2 ml-5 ${editingItemId === list.id ? 'pointer-events-none' : ''}`}
+                className={`bg-[#5c676d] text-white text-lg rounded font-bold px-4 py-2 ml-5 ${editingItemId === list.id ? 'pointer-events-none' : ''}`}
                 onClick={() => editHandler(list.id)}
               >
                 <FiEdit />
               </button>
               <button
-                className='bg-[#3e3b3d] text-white rounded text-lg font-bold px-4 py-2 ml-5'
+                className='bg-[#1d1c1d] text-white rounded text-lg font-bold px-4 py-2 ml-5'
                 onClick={() => completeHandler(list.id)}
               >
                 <AiOutlineCheckSquare />

@@ -8,7 +8,7 @@ const Cards = () => {
 
   return (
     <div>
-        <div className='flex flex-col justify-center items-center gap-10'>
+        <div className=' bg-black w-[100vw] flex flex-col justify-center items-center gap-10'>
                 {lists.map((list) => (
                     <Task key={list.id} list={list}/>
                 ))}
