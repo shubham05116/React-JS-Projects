@@ -4,19 +4,20 @@ import { useState } from 'react';
 
 export const AppContext = createContext();
 
-export const AppContextProvider=({children})=>{
-  const [lists, setList] = useState([]);
-  const [input, setInput] = useState('');
-  const [editChange, setEditChange] = useState('');
-  const [editItemId, setEditItemId] = useState(null);
-  const [editingItemId, setEditingItemId] = useState(null);
+export const AppContextProvider = ({ children }) => {
 
-  // Delete Logic:
+    //state used for handling different operation like edit , add , save, delete:
+    const [lists, setList] = useState([]);
+    const [input, setInput] = useState('');
+    const [editChange, setEditChange] = useState('');
+    const [editItemId, setEditItemId] = useState(null);
+    const [editingItemId, setEditingItemId] = useState(null);
+
+    // Delete Logic:
     function deleteHandler(id) {
         const newData = lists.filter((list) => list.id !== id);
         setList(newData);
     }
-    
 
     //edit:
     function editHandler(id) {
@@ -33,7 +34,7 @@ export const AppContextProvider=({children})=>{
     // Save edit:
     function saveHandler(id) {
         const updatedList = lists.map((list) =>
-            list.id === id ? { ...list, text: editChange} : list
+            list.id === id ? { ...list, text: editChange } : list
         );
         setList(updatedList);
         setEditItemId(null);
@@ -55,24 +56,25 @@ export const AppContextProvider=({children})=>{
         setList(updated);
     }
 
-    const value={
-      lists,
-      setList,
-      input, 
-      setInput,
-      editChange,
-      setEditChange,
-      editItemId,
-      setEditItemId,
-      editingItemId,
-      setEditingItemId,
-      completeHandler,
-      cancelEditHandler,
+
+    const value = {
+        lists,
+        setList,
+        input,
+        setInput,
+        editChange,
+        setEditChange,
+        editItemId,
+        setEditItemId,
+        editingItemId,
+        setEditingItemId,
+        completeHandler,
+        cancelEditHandler,
         saveHandler,
-      editHandler,
-      deleteHandler,
+        editHandler,
+        deleteHandler,
     }
     return (
-      <AppContext.Provider value={value}>{children}</AppContext.Provider>
+        <AppContext.Provider value={value}>{children}</AppContext.Provider>
     )
 }

@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { GrAdd } from 'react-icons/gr';
 import { AppContext } from '../Context/AppContext';
 
-
 let next =1;
 const AddTask = () => {
   const{input , setInput ,setList } = useContext(AppContext);
@@ -21,6 +20,7 @@ const AddTask = () => {
   ]);
   setInput('');
 }
+
   return (
     <div>
      <form onSubmit={submitHandler}>

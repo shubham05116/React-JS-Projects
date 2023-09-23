@@ -6,11 +6,24 @@ import { FiEdit } from 'react-icons/fi';
 import { AppContext } from '../Context/AppContext';
 
 const Task = ({ list }) => {
-  const { deleteHandler, editItemId, editingItemId, editChange, setEditChange, editHandler, saveHandler, completeHandler, cancelEditHandler } = useContext(AppContext);
+  
+  const { deleteHandler,
+    editItemId,
+    editingItemId,
+    editChange,
+    setEditChange,
+    editHandler,
+    saveHandler,
+    completeHandler,
+    cancelEditHandler
+  } = useContext(AppContext);
+
+
   // Edit logic:
   function editChangeHandler(e) {
-   setEditChange(e.target.value);
+    setEditChange(e.target.value);
   }
+
 
   return (
     <div className='w-[60vw] m-3 p-3'>
@@ -41,8 +54,8 @@ const Task = ({ list }) => {
           </div>
         ) : (
           <div className='flex text-white bg-slate-400 p-2 rounded flex-wrap justify-center min-w-[100px] '>
-            <div className=' flex flex-wrap  text-center rounded pl-2 text-2xl '>
-              {list.text}
+            <div className=' flex flex-wrap  text-center rounded pl-2 text-2xl break-all '>
+              <input type="checkbox" /> {list.text}
             </div>
             <div>
               <button

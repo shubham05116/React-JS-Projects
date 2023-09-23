@@ -1,12 +1,12 @@
 import React from 'react'
 import "../Sidebar/sidebar.css"
-import image from "../assets/headerimg.jpg"
+
 const Sidebar = () => {
     return (
         <div className='sidebar'>
             <div className="sidebarItem">
                 <span className="sidebarTitle">About Me</span>
-                <img src={image} alt="" width="250px" />
+                <img src="" alt="" width="250px" />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, excepturi facere. Illo, aperiam eum quae atque sit pariatur delectus harum.</p>
             </div>
           
