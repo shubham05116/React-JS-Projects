@@ -10,7 +10,6 @@ const categoryRoute = require("./routes/categories");
 const multer = require("multer");
 const path = require("path");
 
-//https://blogverse-iy7h.onrender.com/
 
 dotenv.config();
 
@@ -24,7 +23,7 @@ app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/NewSchema', {
+   .connect('mongodb://127.0.0.1:27017/NewSchema', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
