@@ -5,7 +5,6 @@ import { useState } from 'react';
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-
     //state used for handling different operation like edit , add , save, delete:
     const [lists, setList] = useState([]);
     const [input, setInput] = useState('');
@@ -56,7 +55,6 @@ export const AppContextProvider = ({ children }) => {
         setList(updated);
     }
 
-
     const value = {
         lists,
         setList,
@@ -74,6 +72,7 @@ export const AppContextProvider = ({ children }) => {
         editHandler,
         deleteHandler,
     }
+    
     return (
         <AppContext.Provider value={value}>{children}</AppContext.Provider>
     )
